@@ -4,3 +4,4 @@ newspaper3k
 nltk
 requests_html
 html5lib
+anytranslate
