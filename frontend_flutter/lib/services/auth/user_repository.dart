@@ -1,14 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
 class UserRepository {
+  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
   Future<String> authenticate(
       {required String email, required String password}) async {
-    await Future.delayed(Duration(seconds: 2));
     return "authenticate";
   }
 
-  Future<String> logOut() async{
+  Future<String> logOut() async {
     return "Loggedout";
   }
-
 }
