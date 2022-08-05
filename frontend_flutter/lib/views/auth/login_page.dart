@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend_flutter/views/auth/signup_page.dart';
-
+import "package:firebase_auth/firebase_auth.dart";
 
 const inputFieldBorderRadius = 6.0;
 
@@ -103,7 +103,8 @@ class LoginPage extends StatelessWidget {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) =>const SignUpPage()));
+                                        builder: (context) =>
+                                            const SignUpPage()));
                               },
                               child: const Text("SignUp")),
                         ],
