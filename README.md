@@ -4,12 +4,12 @@
 ![Cover_Page](/images/Frida_Cover.png)
 
 ## Table of Content
-[General info](#general-info)
-[Scope](#scope:problem-it-solves)
-[Technologies](#technology)
-[Get Started](#get-started)
-[Features](#features)
-[Contributors](#contributors)
+* [General info](#general-info)
+* [Scope](#scope:problem-it-solves)
+* [Technologies](#technology)
+* [Get Started](#get-started)
+* [Features](#features)
+* [Contributors](#contributors)
 
 ## General info
 This is a one stop solution to all your climate action needs.
@@ -28,5 +28,11 @@ You have to take a key to run through the application, signup to [OpenWeatherApp
 
 
 ## Features
+Following are the features of Frida
+* Personalized weather message
+* Alerts the user about the Flood and Landslide disaster that may take place nearby
+* Latest English and Nepali news on climate and climate changes
+* Notifies user about the events happening nearby and also allows to organize an event relating to environment.
+* Informs on various fundraiser activitities
 
 ## Contributors
