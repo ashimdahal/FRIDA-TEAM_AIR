@@ -96,11 +96,11 @@ As the main goal of the application is to alert people about the natural disaste
 
 ## Features
 Following are the features of Frida
-* Personalized weather message
-* Alerts the user about the Flood and Landslide disaster that may take place nearby
-* Latest English and Nepali news on climate and climate changes
-* Notifies user about the events happening nearby and also allows to organize an event relating to environment.
-* Informs on various fundraiser activitities
+* Personalized messages dictated by weather forecast sent on a daily basis
+* Alerts the user about the Flood and Landslide disaster, using deep learning algorithms, that may take place nearby
+* Latest English and Nepali news on climate action and changes along with its summary
+* Notifies user about the events happening nearby and also allows to organize an event relating to climate action and environment
+* Informs on various fundraiser activitities related to climate action
 
 ## Contributors
 <div align="center">
