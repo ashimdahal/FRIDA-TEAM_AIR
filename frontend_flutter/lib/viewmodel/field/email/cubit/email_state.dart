@@ -12,8 +12,11 @@ class EmailInitial extends EmailState {}
 class EmailFieldValid extends EmailState {
   final String value;
 
-  const EmailFieldValid({required this.value});
+   EmailFieldValid({required this.value});
+   
   String get email => value;
+  @override
+  List<Object> get props => [value];
 }
 
 class EmailFieldInvalid extends EmailState {

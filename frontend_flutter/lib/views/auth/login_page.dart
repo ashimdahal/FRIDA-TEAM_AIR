@@ -69,18 +69,25 @@ class _LoginPageState extends State<LoginPage> {
                               onTap: () async {
                                 if (state1 is EmailFieldValid &&
                                     state2 is PasswordFieldValid) {
-                                  try {
-                                    await userRepository.authenticate(
-                                        email: state1.email,
-                                        password: state2.password);
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context1) =>
-                                                HomeScreen()));
-                                  } catch (err) {
-                                  }
-                                } else {
+                                  bool value =
+                                      await userRepository.authenticate(
+                                          email: state1.email,
+                                          password: state2.password);
+                                  
+                                    if (value == true) {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context1) =>
+                                                  HomeScreen()));
+                                    } else {
+                                      context1
+                                          .read<EmailCubit>()
+                                          .onEmailChange("");
+                                      context2
+                                          .read<PasswordCubit>()
+                                          .onPasswordChange("");
+                                    }
                                 }
                               },
                               child: Ink(
