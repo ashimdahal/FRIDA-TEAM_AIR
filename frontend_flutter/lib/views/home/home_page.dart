@@ -6,7 +6,7 @@ import '../funds/funds_page.dart';
 import '../news/news_page.dart';
 import 'components/personalized_component.dart';
 
-const imageName = "assets/images/backgroundImage.png";
+const imageName = "Assets/Images/backgroundImage.png";
 
 const lists = [
   {"name": "Events", "iconData": Icons.event, "route": EventsScreen()},

@@ -9,9 +9,8 @@ abstract class PasswordState extends Equatable {
 
 class PasswordInitial extends PasswordState {}
 
-class PasswordFieldValid extends PasswordState{
-}
-class PasswordFieldInvalid extends PasswordState{
-     String get value => "Invalid Email";
-}
+class PasswordFieldValid extends PasswordState {}
 
+class PasswordFieldInvalid extends PasswordState {
+  String get value => "Invalid Email";
+}
