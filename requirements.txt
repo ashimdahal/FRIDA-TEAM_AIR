@@ -4,4 +4,6 @@ newspaper3k
 nltk
 requests_html
 html5lib
-anytranslate
+-f https://download.pytorch.org/whl/cpu
+torch==1.12.1
+
