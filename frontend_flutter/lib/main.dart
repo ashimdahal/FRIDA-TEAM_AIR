@@ -4,11 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend_flutter/utils/theme.dart';
 import 'package:frontend_flutter/viewmodel/field/email/cubit/email_cubit.dart';
 import 'package:frontend_flutter/viewmodel/field/password/cubit/password_cubit.dart';
-import 'package:frontend_flutter/views/auth/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:frontend_flutter/views/events/events_page.dart';
 import 'package:frontend_flutter/views/home/home_page.dart';
-import 'package:frontend_flutter/views/news/news_page.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -37,7 +34,7 @@ class MyApp extends StatelessWidget {
             return PasswordCubit();
           })
         ],
-        child: const NewsScreen(),
+        child: const HomeScreen(),
       ),
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(),

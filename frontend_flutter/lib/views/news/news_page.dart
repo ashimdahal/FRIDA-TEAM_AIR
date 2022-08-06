@@ -132,14 +132,14 @@ class _NewsScreenState extends State<NewsScreen> {
                                         },
                                         child: Ink(
                                           height: size.height * 0.04,
-                                          width: size.width * 0.2,
+                                          width: size.width*0.3,
                                           decoration: BoxDecoration(
                                               color: Colors.red,
                                               borderRadius:
                                                   BorderRadius.circular(12.0)),
                                           child: Center(
                                             child: Text(
-                                              "view",
+                                              "view more",
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .titleMedium!
