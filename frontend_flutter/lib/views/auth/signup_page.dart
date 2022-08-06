@@ -87,6 +87,7 @@ class FullNameWidget extends StatelessWidget {
           padding: EdgeInsets.only(
               right: size.width * 0.04, top: size.height * 0.01),
           child: TextFormField(
+            textInputAction: TextInputAction.next,
             decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.person),
                 hintStyle: const TextStyle(fontWeight: FontWeight.w700),
