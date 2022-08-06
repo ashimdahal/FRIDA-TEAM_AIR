@@ -20,6 +20,59 @@ This is a one stop solution to all your climate action needs.
 ## Scope
 
 ## Technologies
+<p align="left">
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white" />
+    </a>
+    <a href="https://www.python.org" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"
+            alt="python" />
+    </a>
+    <a href="http://flutter.dev/" target="_blank" rel="noreferrer"> <img
+            src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"
+            alt="flutter" />
+    </a>
+    <a href=https://dart.dev/" target="_blank" rel="noreferrer"> <img
+            src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="dart" />
+    </a>                                                                                                        
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+    </a>                                                                                                 
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/nltk-595F69?style=for-the-badge&logo=nltk&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/newspaper3k-4473C5?style=for-the-badge&logo=newspaper3kpython&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/matplotlib-EE4C2C?style=for-the-badge&logo=matplotlib&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/beautiful%20soup-3D3D3D?style=for-the-badge&logo=beautifulsoup4&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/sqlite3-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/scrapy-5FA839?style=for-the-badge&logo=scrapy&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" />
+    </a>
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/openweathermap-003B57?style=for-the-badge&logo=openweathermap&logoColor=white" />
+    </a>                                                                                                                  
+    <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/google%20colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" />
+    </a>
+    
+</p>
 
 ## Glimpse
 
