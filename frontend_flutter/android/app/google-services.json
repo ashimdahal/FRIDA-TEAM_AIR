@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "320772079693",
+    "project_id": "team-air-165ff",
+    "storage_bucket": "team-air-165ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320772079693:android:0eeffe8037810fa32a1c04",
+        "android_client_info": {
+          "package_name": "com.example.frontend_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320772079693-3v6coer5qq7dmd1t8483h52to7m3upju.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_GJsZ5iXI_mP_vfZcNPS7S28xOWvV3E8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320772079693-3v6coer5qq7dmd1t8483h52to7m3upju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

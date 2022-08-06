@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class PersonalizeScreen extends StatelessWidget {
   const PersonalizeScreen({Key? key}) : super(key: key);
 
