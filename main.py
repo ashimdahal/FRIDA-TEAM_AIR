@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.responses import PlainTextResponse
 from fundraiser.gofund import funds
 from news.create_table import getnews
-#from flood_detection.flooddetection import flood_info
+from flood_detection.flooddetection import flood_info
 from landslides.predict import get_weather
 import torch
 from landslides.predict import LogisticRegression
@@ -21,14 +21,15 @@ async def news():
     news=getnews()
     return news
 
-@app.get('/flood',response_class=PlainTextResponse)
+@app.get('/flood')
 async def flooddetection():
-    flooddata=flooddetection()
+    flooddata=flood_info()
     return flooddata
 
-@app.get('/events', response_class=PlainTextResponse)
+@app.get('/events')
 async def getevents():
-    events=None
+    events={"Event name":"Protect the Nature by American Socieyty for change","Event name":"Protect Green life"}
+    return events
 
 
 @app.get('/landslides')

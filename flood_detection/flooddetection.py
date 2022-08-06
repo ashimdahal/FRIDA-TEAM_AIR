@@ -36,21 +36,24 @@ def flood_info():
     final_output={}
     for _river_loc in flood_places:
         counter,water_level,res=0,0,None
-        url=_base_url.format(_river_loc,str((datetime.datetime.now() - timedelta(days=1)).date()),str(datetime.date.today()))
+        url=_base_url.format(flood_places[_river_loc],str((datetime.datetime.now() - timedelta(days=1)).date()),str(datetime.date.today()))
         print(url)
         res=requests.get(url)
-        print(res.text)
         res=json.loads(res.text)
         for event in res['data']:
-            water_level+=int(event['value'])
+            try:
+                water_level+=int(event['value'])
+            except:
+                pass
+            try:
+                water_level+=float(event['value'])
+            except:
+                pass
+
             counter+=1
         if water_level>5: # in meters
-            final_output[_river_loc]={"water level":water_level,"message":"Stay alert high chance of flood"}
+            final_output[_river_loc]={"water level":water_level/counter,"message":"Stay alert high chance of flood"}
         if water_level<5:
-            final_output[_river_loc]={"water level":water_level,"message":"Water level is nominal"}
-    #print(final_output)
-    #return final_output
+            final_output[_river_loc]={"water level":water_level/counter,"message":"Water level is nominal"}
+    return final_output
         
-
-
-flood_info()
