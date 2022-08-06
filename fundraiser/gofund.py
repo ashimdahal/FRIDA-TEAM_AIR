@@ -2,9 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
+
 def funds():
     # link of the fundraiser source
-    url = "https://www.gofundme.com/mvc.php?route=homepage_norma/search&term=climate"
+    url = "https://www.gofundme.com/mvc.php?route=homepage_norma/search&term=climate%20change"
     
     # getting html content
     r = requests.get(url)
@@ -42,12 +43,25 @@ def funds():
 
         # adding details dictionary to the list 
         funds.append(fund_dict)
+        final_send=[]
+       
+        for i in funds:
+            template={
+            "Title":None,
+            "Link":None,
+            "Location":None,
+            "Fund_Goal":None,
+            "Last_Donation":None,
+            "Fund_Reached":None
+        }
+            template['Title']=(i['Title'])
+            template['Link']=(i['Link'])
+            template['Location']=(i['Location'])
+            template['Fund_Goal']=(i['Fund_Goal'])
+            template['Last_Donation']=(i['Last_Donation'])
+            template['Fund_Reached']=(i['Fund_Reached'])
+
+            final_send.append(template)
         
-    return funds
-    
-# repeat after certain time	
-if __name__ == "__main__":
-	while True:
-		funds()
-		time_hr = 60*24							#hour to minute
-		time.sleep(60 * time_hr)				#minute to seconds
+    return final_send
+

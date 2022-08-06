@@ -30,9 +30,8 @@ flood_places={
     "Kali Gandaki at Kalipul Beni":20005
 }
 
-
 _base_url="https://hydrology.gov.np/gss/api/observation?series_id={}&date_from={}&date_to={}"
-async def flood_info():
+def flood_info():
     final_output={}
     for _river_loc in flood_places:
         counter,water_level,res=0,0,None
@@ -46,11 +45,11 @@ async def flood_info():
             final_output[_river_loc]={"water level":water_level,"message":"Stay alert high chance of flood"}
         if water_level<5:
             final_output[_river_loc]={"water level":water_level,"message":"Water level is nominal"}
-
+    print(final_output)
     return final_output
         
 
-
+flood_info()
 
 
 
