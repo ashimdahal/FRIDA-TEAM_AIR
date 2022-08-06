@@ -103,6 +103,20 @@ Following are the features of Frida
 * Informs on various fundraiser activitities
 
 ## Contributors
+<div align="center">
+    <a href="https://github.com/Anuj-Khakda" target="_blank" rel="noreferrer" >
+        <img src="/images/Anuj Khadka.png" width="250" height="285" />
+    </a>&nbsp;
+    <a href="https://github.com/Anuj-Khakda" target="_blank" rel="noreferrer">
+        <img src="/images/Anuj Khadka.png" />
+    </a>
+    <a href="https://github.com/Anuj-Khakda" target="_blank" rel="noreferrer">
+        <img src="/images/Anuj Khadka.png" />
+    </a>
+    
+    
+</div>                                                                                                                         
+
                                                                                                                           
                                                                                                                           
 ## Special Thanks to Organizers:
