@@ -1,8 +1,10 @@
 
 # Frida
-> one stop solution to all your climate action needs
+> A one-stop solution to all your climate action needs that predict landslides, and flood events, and provides news summary, fundraising, and upcoming events alerts on climate change.
 
-![Cover_Page](/images/Frida_Cover.png)
+<p align="center">
+    <img src="/images/Frida_Cover.png")
+</p>
 
 ## Table of Content
 * [General info](#general-info)
@@ -87,7 +89,9 @@ pip install -r requirements.py
 You have to take a key to run through the application, signup to [OpenWeatherApp](https://home.openweathermap.org/users/sign_up) and get you access key.
 
 ## Why Name Frida?
-Frida is a 13 years Golden Labrador Retriever rescue dog in the Mexican Navy. She spent her life helping rescue survivors worldwide in the wake of natural disasters. Frida has helped save the lives of many people during massive natural disasters, like saving the lives of people buried under the rubble of buildings that collapsed in the 2010 Haiti earthquake, and victims of the landslide in Guatemala in 2012. The pup became a household name after the math of a deadly earthquake in Mexico in 2017 after she was credited for finding over 40 bodies and a dozen of people alive over her storied career. 
+Frida is a 13 years Golden Labrador Retriever rescue dog in the Mexican Navy who spent her life helping rescue survivors worldwide in the wake of natural disasters. Frida has helped save the lives of many people during massive natural disasters, like the 2010 Haiti earthquake, and the 2012 Guatemala landslides. The pup became a household name in the aftermath of a deadly earthquake in Mexico in 2017 when was credited for finding over a dozen people alive over her storied career. <br><br>
+As the main goal of the application is to alert people about the natural disaster like landslides and floods nearby and potentially save their life, we as a team decided to name the application on the salutation of such a hero who had dedicated her whole life to saving humans who were impacted in massive disasters.
+
 
 
 ## Features
@@ -104,7 +108,7 @@ Following are the features of Frida
 ## Special Thanks to Organizers:
 <p align="left">
     <a href="https://ku.edu.np/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/kathmandu%20university-4C5176?style=for-the-badge&logo=KU&logoColor=white&labelcolor=AAAAAA" />
+        <img src="https://img.shields.io/badge/kathmandu%20university%20Computer%20Club-4C5176?style=for-the-badge&logo=KU&logoColor=white&labelcolor=AAAAAA" />
     </a>
     <a href="https://mlh.io/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/major%20league%20hacking-265A8F?style=for-the-badge&logo=mlh&logoColor=white" />
