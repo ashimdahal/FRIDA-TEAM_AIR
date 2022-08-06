@@ -1,5 +1,6 @@
 # Frida
 > one stop solution to all your climate action needs
+
 ![Cover_Page](/images/Frida_Cover.png)
 
 ## Table of Content
