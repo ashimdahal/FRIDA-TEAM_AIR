@@ -2,9 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend_flutter/views/auth/signup_page.dart';
 
-
 const inputFieldBorderRadius = 6.0;
-
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,8 +15,8 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-     final _formKey = GlobalKey<FormState>();
-    
+    final _formKey = GlobalKey<FormState>();
+
     return Scaffold(
       body: ScrollConfiguration(
         behavior: const ScrollBehavior().copyWith(overscroll: false),
@@ -49,20 +47,18 @@ class _LoginPageState extends State<LoginPage> {
                       padding: EdgeInsets.only(top: size.height * 0.02),
                       child: const PasswordWidget(),
                     ),
-          
+
                     /*
                     login button
                     
                     */
-          
+
                     Padding(
                       padding: EdgeInsets.only(top: size.height * 0.06),
                       child: InkWell(
                         borderRadius: BorderRadius.circular(12.0),
                         onTap: () {
-                          if(_formKey.currentState!.validate()){
-                            
-                          }
+                          if (_formKey.currentState!.validate()) {}
                         },
                         child: Ink(
                           decoration: BoxDecoration(
@@ -81,9 +77,9 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-          
+
                     // Forgot Password Button
-          
+
                     Padding(
                       padding: EdgeInsets.only(top: size.height * 0.03),
                       child: SizedBox(
@@ -95,13 +91,13 @@ class _LoginPageState extends State<LoginPage> {
                                 const Center(child: Text("Forgot Password ?"))),
                       ),
                     ),
-          
+
                     /*
                     
                     Widget that redirects to Sign Up Page
           
                     */
-          
+
                     Padding(
                       padding: EdgeInsets.only(top: size.height * 0.01),
                       child: SizedBox(
@@ -173,15 +169,15 @@ class EmailWidget extends StatelessWidget {
                 errorBorder: OutlineInputBorder(
                     borderRadius:
                         BorderRadius.circular(inputFieldBorderRadius))),
-                        validator: ((value) {
-                           if (value!.isEmpty) {
-                            return "email field cannot be empty";
-                          } else {
-                            return null;
-                          }
-                        }
+            validator: ((value) {
+              if (value!.isEmpty) {
+                return "email field cannot be empty";
+              } else {
+                return null;
+              }
+            }),
           ),
-        ),)
+        )
       ],
     );
   }
@@ -217,34 +213,34 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                 child: TextFormField(
                   obscureText: !isShown,
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.lock),
-                      hintStyle: const TextStyle(fontWeight: FontWeight.w700),
-                      hintText: "Your Password",
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius)),
-                      focusedErrorBorder: OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(width: 2, color: Colors.red),
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius)),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(width: 2, color: Colors.purple),
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius)),
-                      errorBorder: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius),
-                              ),
-                              ),
-                              validator: (value){
-                                if (value!.isEmpty) {
-                            return "password can not be empty";
-                          } else {
-                            return null;
-                          }
-                              },
+                    prefixIcon: const Icon(Icons.lock),
+                    hintStyle: const TextStyle(fontWeight: FontWeight.w700),
+                    hintText: "Your Password",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius:
+                            BorderRadius.circular(inputFieldBorderRadius)),
+                    focusedErrorBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 2, color: Colors.red),
+                        borderRadius:
+                            BorderRadius.circular(inputFieldBorderRadius)),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 2, color: Colors.purple),
+                        borderRadius:
+                            BorderRadius.circular(inputFieldBorderRadius)),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius:
+                          BorderRadius.circular(inputFieldBorderRadius),
+                    ),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return "password can not be empty";
+                    } else {
+                      return null;
+                    }
+                  },
                 ),
               ),
               Positioned(

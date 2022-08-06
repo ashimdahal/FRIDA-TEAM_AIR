@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 import '../events/events_page.dart';
 import '../funds/funds_page.dart';
 import '../news/news_page.dart';
 import 'components/personalized_component.dart';
 
-
-
-
 const imageName = "assets/images/backgroundImage.png";
 
 const lists = [
-  {"name": "Events", "iconData": Icons.event,"route":EventsScreen()},
-  {"name": "News", "iconData": Icons.newspaper,"route":NewsScreen()},
-  {"name": "Funds", "iconData": Icons.attach_money_rounded,"route":FundsScreen()}
+  {"name": "Events", "iconData": Icons.event, "route": EventsScreen()},
+  {"name": "News", "iconData": Icons.newspaper, "route": NewsScreen()},
+  {
+    "name": "Funds",
+    "iconData": Icons.attach_money_rounded,
+    "route": FundsScreen()
+  }
 ];
 
 class HomeScreen extends StatelessWidget {
@@ -155,7 +155,6 @@ class HomeScreen extends StatelessWidget {
                   //! Today Component
                   //! Personalized message
                   const PersonalizedComponent(),
-                  
 
                   /* 
                     events,
@@ -176,19 +175,25 @@ class HomeScreen extends StatelessWidget {
                             padding: EdgeInsets.symmetric(
                                 vertical: size.height * 0.02),
                             child: Material(
-                              borderRadius:BorderRadius.circular(12.0),
+                              borderRadius: BorderRadius.circular(12.0),
                               child: InkWell(
-                                borderRadius:BorderRadius.circular(12.0),
-                                onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>EventsScreen()));
+                                borderRadius: BorderRadius.circular(12.0),
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              EventsScreen()));
                                 },
                                 child: Ink(
                                   height: size.height * 0.15,
                                   decoration: BoxDecoration(
                                       color: Colors.white,
-                                      borderRadius: BorderRadius.circular(12.0)),
+                                      borderRadius:
+                                          BorderRadius.circular(12.0)),
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Icon(

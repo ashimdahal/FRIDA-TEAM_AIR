@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class NewsScreen extends StatelessWidget {
   const NewsScreen({Key? key}) : super(key: key);
 
