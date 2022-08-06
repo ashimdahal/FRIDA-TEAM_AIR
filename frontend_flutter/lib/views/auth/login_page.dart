@@ -1,9 +1,13 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:frontend_flutter/services/auth/user_repository.dart';
 import 'package:frontend_flutter/viewmodel/field/email/cubit/email_cubit.dart';
 import 'package:frontend_flutter/viewmodel/field/password/cubit/password_cubit.dart';
 import 'package:frontend_flutter/views/auth/signup_page.dart';
+import 'package:frontend_flutter/views/home/home_page.dart';
 
 const inputFieldBorderRadius = 6.0;
 
@@ -15,6 +19,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  UserRepository userRepository = UserRepository();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -55,36 +60,63 @@ class _LoginPageState extends State<LoginPage> {
 
                   Padding(
                     padding: EdgeInsets.only(top: size.height * 0.06),
-                    child: InkWell(
-                      borderRadius: BorderRadius.circular(12.0),
-                      onTap: () {},
-                      child: Ink(
-                        decoration: BoxDecoration(
-                            boxShadow: const [
-                              BoxShadow(
-                                  color: Color.fromARGB(90, 58, 58, 58),
-                                  blurRadius: 10.0,
-                                  spreadRadius: 0.0,
-                                  offset: Offset(0, 2.0)),
-                              BoxShadow(
-                                  color: Color.fromARGB(90, 58, 58, 58),
-                                  blurRadius: 10.0,
-                                  spreadRadius: 0.0,
-                                  offset: Offset(0, 2.0))
-                            ],
-                            color: Colors.purple,
-                            borderRadius: BorderRadius.circular(12.0)),
-                        height: size.height * 0.06,
-                        width: size.width * 0.8,
-                        child: Center(
-                          child: Text(
-                            "Login",
-                            style: TextStyle(
-                                fontSize: size.height * 0.025,
-                                color: Colors.white),
-                          ),
-                        ),
-                      ),
+                    child: BlocBuilder<EmailCubit, EmailState>(
+                      builder: (context1, state1) {
+                        return BlocBuilder<PasswordCubit, PasswordState>(
+                          builder: (context2, state2) {
+                            return InkWell(
+                              borderRadius: BorderRadius.circular(12.0),
+                              onTap: () async {
+                                if (state1 is EmailFieldValid &&
+                                    state2 is PasswordFieldValid) {
+                                  try {
+                                    await userRepository.authenticate(
+                                        email: state1.email,
+                                        password: state2.password);
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context1) =>
+                                                HomeScreen()));
+                                  } catch (err) {
+                                  }
+                                } else {
+                                }
+                              },
+                              child: Ink(
+                                decoration: BoxDecoration(
+                                    boxShadow: const [
+                                      BoxShadow(
+                                          color: Color.fromARGB(90, 58, 58, 58),
+                                          blurRadius: 10.0,
+                                          spreadRadius: 0.0,
+                                          offset: Offset(0, 2.0)),
+                                      BoxShadow(
+                                          color: Color.fromARGB(90, 58, 58, 58),
+                                          blurRadius: 10.0,
+                                          spreadRadius: 0.0,
+                                          offset: Offset(0, 2.0))
+                                    ],
+                                    color: (state1 is EmailFieldValid &&
+                                            state2 is PasswordFieldValid)
+                                        ? Colors.purple
+                                        : Colors.grey,
+                                    borderRadius: BorderRadius.circular(12.0)),
+                                height: size.height * 0.06,
+                                width: size.width * 0.8,
+                                child: Center(
+                                  child: Text(
+                                    "Login",
+                                    style: TextStyle(
+                                        fontSize: size.height * 0.025,
+                                        color: Colors.white),
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      },
                     ),
                   ),
 
