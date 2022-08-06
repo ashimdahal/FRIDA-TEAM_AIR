@@ -8,4 +8,5 @@ html5lib
 torch==1.12.1
 fastapi
 pydantic
+uvicorn
 

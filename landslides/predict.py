@@ -20,8 +20,8 @@ def get_one_hot(lon,lat):
     eye_lon[np.argmin(diff_lon)]
     return np.concatenate((eye_lat[np.argmin(diff_lat)], eye_lon[np.argmin(diff_lon)],))
 
-key = open(Path(__file__).resolve().parent / "key.txt").read()
-url = "http://api.openweathermap.org/data/2.5/weather?appid="
+#key = open(Path(__file__).resolve().parent / "key.txt").read()
+#url = "http://api.openweathermap.org/data/2.5/weather?appid="
 # kathmandu or any other nepali xity hanera try garum hai ta kta ho
 
 def get_weather(key,url,city):
@@ -67,3 +67,4 @@ model = LogisticRegression()
 model.load_state_dict(torch.load(Path(__file__).resolve().parent /'model.pt',map_location=torch.device('cpu')))
 
 model.eval()
+#print(model.input.item())

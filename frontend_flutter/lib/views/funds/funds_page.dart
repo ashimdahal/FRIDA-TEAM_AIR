@@ -7,7 +7,7 @@ class FundsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personalize Message"),
+        title: const Text("Donations"),
       ),
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frontend_flutter/model/events/events_model.dart';
 import 'package:frontend_flutter/services/events/events_repository.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class EventsScreen extends StatefulWidget {
   const EventsScreen({Key? key}) : super(key: key);
@@ -79,9 +81,11 @@ class _EventsScreenState extends State<EventsScreen> {
                                         begin: Alignment.topCenter,
                                         end: Alignment.bottomCenter)),
                                 child: Padding(
-                                  padding:  EdgeInsets.only(left: size.width*0.05),
+                                  padding:
+                                      EdgeInsets.only(left: size.width * 0.05),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
@@ -100,10 +104,13 @@ class _EventsScreenState extends State<EventsScreen> {
                                       Padding(
                                         padding: EdgeInsets.only(
                                             top: size.height * 0.01),
-                                        child: Text(events.location,
-                                        style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                          color: Colors.white
-                                        ),),
+                                        child: Text(
+                                          events.location,
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyLarge!
+                                              .copyWith(color: Colors.white),
+                                        ),
                                       ),
                                       Padding(
                                         padding: EdgeInsets.only(
@@ -142,7 +149,15 @@ class _EventsScreenState extends State<EventsScreen> {
                                           child: InkWell(
                                             borderRadius:
                                                 BorderRadius.circular(12.0),
-                                            onTap: () {},
+                                            onTap: () async {
+                                              if (await canLaunchUrl(
+                                                  Uri.parse(events.formLink))) {
+                                                await launchUrlString(
+                                                    events.formLink,
+                                                    mode: LaunchMode
+                                                        .externalApplication);
+                                              }
+                                            },
                                             child: Ink(
                                               height: size.height * 0.06,
                                               width: size.width * 0.7,
@@ -169,7 +184,8 @@ class _EventsScreenState extends State<EventsScreen> {
                                                         .copyWith(
                                                             color: Colors.white,
                                                             fontWeight:
-                                                                FontWeight.bold),
+                                                                FontWeight
+                                                                    .bold),
                                                   ),
                                                 ],
                                               ),
@@ -273,7 +289,15 @@ class _EventsScreenState extends State<EventsScreen> {
                                   borderRadius: BorderRadius.circular(12.0),
                                   child: InkWell(
                                     borderRadius: BorderRadius.circular(12.0),
-                                    onTap: () {},
+                                    onTap: () async{
+                                      if (await canLaunchUrl(
+                                                  Uri.parse(events.formLink))) {
+                                                await launchUrlString(
+                                                    events.formLink,
+                                                    mode: LaunchMode
+                                                        .externalApplication);
+                                              }
+                                    },
                                     child: Ink(
                                       height: size.height * 0.06,
                                       width: size.width * 0.7,

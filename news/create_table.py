@@ -1,8 +1,9 @@
 import sqlite3
+from pathlib import Path
 
 def getnews():
 
-    con = sqlite3.connect('news.db')
+    con = sqlite3.connect(Path(__file__).resolve().parent /'news.db')
     cur = con.cursor()
     # english_news
     # sql = '''CREATE TABLE nepali_news (id INTEGER NOT NULL PRIMARY KEY
@@ -24,12 +25,8 @@ def getnews():
         newsformat['link']=item[2]
         newsformat['breif']=item[3]
         final_news_output.append(newsformat)
-
-    print(final_news_output)
     
     nepalisql = '''SELECT * FROM nepali_news'''
-
-    final_news_output=[]
     for item in (cur.execute(nepalisql).fetchall()):
         newsformat={
         "id":None,
@@ -42,7 +39,6 @@ def getnews():
         newsformat['link']=item[2]
         newsformat['breif']=item[3]
         final_news_output.append(newsformat)
-
-    print(final_news_output)   
+  
     return final_news_output
 
