@@ -166,7 +166,7 @@ class EmailWidget extends StatelessWidget {
                 },
                 decoration: InputDecoration(
                     errorText:
-                        (state is EmailFieldInvalid) ? state.value : null,
+                        (state is EmailFieldInvalid) ? "Invalid Email": null,
                     prefixIcon: const Icon(Icons.email),
                     hintStyle: const TextStyle(fontWeight: FontWeight.w700),
                     hintText: "Your Email",
@@ -226,7 +226,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                     child: TextFormField(
                       obscureText: !isShown,
                       decoration: InputDecoration(
-                        errorText: (state is PasswordFieldInvalid)?state.value:null,
+                        errorText: (state is PasswordFieldInvalid)?"Invalid Password":null,
                         prefixIcon: const Icon(Icons.lock),
                         hintStyle: const TextStyle(fontWeight: FontWeight.w700),
                         hintText: "Your Password",
