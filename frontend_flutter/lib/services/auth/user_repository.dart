@@ -10,7 +10,7 @@ class UserRepository {
       return true;
     } catch (e) {
       return false;
-    };
+    }
   }
 
   Future<String> logOut() async {

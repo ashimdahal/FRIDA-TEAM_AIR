@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 const inputFieldBorderRadius = 6.0;
 
-
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
@@ -12,13 +11,14 @@ class SignUpPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title:const Text("Sign Up"),
+        title: const Text("Sign Up"),
       ),
       body: SingleChildScrollView(
         child: SizedBox(
           width: size.width,
           child: Padding(
-            padding: EdgeInsets.only(left: size.width * 0.04,bottom: size.height*0.04),
+            padding: EdgeInsets.only(
+                left: size.width * 0.04, bottom: size.height * 0.04),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -30,7 +30,7 @@ class SignUpPage extends StatelessWidget {
                   padding: EdgeInsets.only(top: size.height * 0.025),
                   child: const EmailWidget(),
                 ),
-                 Padding(
+                Padding(
                   padding: EdgeInsets.only(top: size.height * 0.025),
                   child: const PasswordWidget(),
                 ),
@@ -39,28 +39,27 @@ class SignUpPage extends StatelessWidget {
                   child: const LocationWidget(),
                 ),
                 Padding(
-                    padding: EdgeInsets.only(top: size.height * 0.06),
-                    child: InkWell(
-                      borderRadius: BorderRadius.circular(12.0),
-                      onTap: () {},
-                      child: Ink(
-                        decoration: BoxDecoration(
-                            color: Colors.purple,
-                            borderRadius: BorderRadius.circular(12.0)),
-                        height: size.height * 0.06,
-                        width: size.width * 0.92,
-                        child: Center(
-                          child: Text(
-                            "Sign Up",
-                            style: TextStyle(
-                                fontSize: size.height * 0.025,
-                                color: Colors.white),
-                          ),
+                  padding: EdgeInsets.only(top: size.height * 0.06),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12.0),
+                    onTap: () {},
+                    child: Ink(
+                      decoration: BoxDecoration(
+                          color: Colors.purple,
+                          borderRadius: BorderRadius.circular(12.0)),
+                      height: size.height * 0.06,
+                      width: size.width * 0.92,
+                      child: Center(
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                              fontSize: size.height * 0.025,
+                              color: Colors.white),
                         ),
                       ),
                     ),
                   ),
-
+                ),
               ],
             ),
           ),
@@ -85,8 +84,8 @@ class FullNameWidget extends StatelessWidget {
               fontSize: size.height * 0.022, fontWeight: FontWeight.w300),
         ),
         Padding(
-          padding:
-              EdgeInsets.only(right: size.width * 0.04, top: size.height * 0.01),
+          padding: EdgeInsets.only(
+              right: size.width * 0.04, top: size.height * 0.01),
           child: TextFormField(
             decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.person),
@@ -114,7 +113,6 @@ class FullNameWidget extends StatelessWidget {
   }
 }
 
-
 class EmailWidget extends StatelessWidget {
   const EmailWidget({Key? key}) : super(key: key);
 
@@ -130,8 +128,8 @@ class EmailWidget extends StatelessWidget {
               fontSize: size.height * 0.022, fontWeight: FontWeight.w300),
         ),
         Padding(
-          padding:
-              EdgeInsets.only(right: size.width * 0.04, top: size.height * 0.01),
+          padding: EdgeInsets.only(
+              right: size.width * 0.04, top: size.height * 0.01),
           child: TextFormField(
             decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.email),
@@ -159,8 +157,6 @@ class EmailWidget extends StatelessWidget {
   }
 }
 
-
-
 class PasswordWidget extends StatefulWidget {
   const PasswordWidget({Key? key}) : super(key: key);
 
@@ -182,8 +178,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
               fontSize: size.height * 0.022, fontWeight: FontWeight.w300),
         ),
         Padding(
-          padding:
-              EdgeInsets.only(right: size.width * 0.04, top: size.height * 0.01),
+          padding: EdgeInsets.only(
+              right: size.width * 0.04, top: size.height * 0.01),
           child: Stack(
             children: [
               SizedBox(
@@ -239,7 +235,6 @@ class _PasswordWidgetState extends State<PasswordWidget> {
   }
 }
 
-
 class LocationWidget extends StatelessWidget {
   const LocationWidget({Key? key}) : super(key: key);
 
@@ -255,8 +250,8 @@ class LocationWidget extends StatelessWidget {
               fontSize: size.height * 0.022, fontWeight: FontWeight.w300),
         ),
         Padding(
-          padding:
-             EdgeInsets.only(right: size.width * 0.04, top: size.height * 0.01),
+          padding: EdgeInsets.only(
+              right: size.width * 0.04, top: size.height * 0.01),
           child: TextFormField(
             decoration: InputDecoration(
                 prefixIcon: const Icon(Icons.location_on),
@@ -283,4 +278,3 @@ class LocationWidget extends StatelessWidget {
     );
   }
 }
-

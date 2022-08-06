@@ -1,117 +1,128 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend_flutter/views/auth/signup_page.dart';
-import "package:firebase_auth/firebase_auth.dart";
 
 const inputFieldBorderRadius = 6.0;
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    final _formKey = GlobalKey<FormState>();
+
     return Scaffold(
       body: ScrollConfiguration(
         behavior: const ScrollBehavior().copyWith(overscroll: false),
         child: SingleChildScrollView(
-          child: SizedBox(
-            height: size.height,
-            width: size.width,
-            child: Padding(
-              padding: EdgeInsets.only(left: size.width * 0.1),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: size.height * 0.2),
-                    child: Text(
-                      "Login",
-                      style: Theme.of(context).textTheme.headline4!.copyWith(
-                          fontWeight: FontWeight.bold, color: Colors.black),
+          child: Form(
+            key: _formKey,
+            child: SizedBox(
+              height: size.height,
+              width: size.width,
+              child: Padding(
+                padding: EdgeInsets.only(left: size.width * 0.1),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.2),
+                      child: Text(
+                        "Login",
+                        style: Theme.of(context).textTheme.headline4!.copyWith(
+                            fontWeight: FontWeight.bold, color: Colors.black),
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: size.height * 0.05),
-                    child: const EmailWidget(),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: size.height * 0.02),
-                    child: const PasswordWidget(),
-                  ),
+                    Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.05),
+                      child: const EmailWidget(),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.02),
+                      child: const PasswordWidget(),
+                    ),
 
-                  /*
-                  login button
-                  
-                  */
+                    /*
+                    login button
+                    
+                    */
 
-                  Padding(
-                    padding: EdgeInsets.only(top: size.height * 0.06),
-                    child: InkWell(
-                      borderRadius: BorderRadius.circular(12.0),
-                      onTap: () {},
-                      child: Ink(
-                        decoration: BoxDecoration(
-                            color: Colors.purple,
-                            borderRadius: BorderRadius.circular(12.0)),
-                        height: size.height * 0.06,
-                        width: size.width * 0.8,
-                        child: Center(
-                          child: Text(
-                            "Login",
-                            style: TextStyle(
-                                fontSize: size.height * 0.025,
-                                color: Colors.white),
+                    Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.06),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(12.0),
+                        onTap: () {
+                          if (_formKey.currentState!.validate()) {}
+                        },
+                        child: Ink(
+                          decoration: BoxDecoration(
+                              color: Colors.purple,
+                              borderRadius: BorderRadius.circular(12.0)),
+                          height: size.height * 0.06,
+                          width: size.width * 0.8,
+                          child: Center(
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                  fontSize: size.height * 0.025,
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
 
-                  // Forgot Password Button
+                    // Forgot Password Button
 
-                  Padding(
-                    padding: EdgeInsets.only(top: size.height * 0.03),
-                    child: SizedBox(
-                      height: size.height * 0.06,
-                      width: size.width * 0.8,
-                      child: TextButton(
-                          onPressed: () {},
-                          child:
-                              const Center(child: Text("Forgot Password ?"))),
-                    ),
-                  ),
-
-                  /*
-                  
-                  Widget that redirects to Sign Up Page
-
-                  */
-
-                  Padding(
-                    padding: EdgeInsets.only(top: size.height * 0.01),
-                    child: SizedBox(
-                      height: size.height * 0.06,
-                      width: size.width * 0.8,
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text("Don't have an account?"),
-                          TextButton(
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const SignUpPage()));
-                              },
-                              child: const Text("SignUp")),
-                        ],
+                    Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.03),
+                      child: SizedBox(
+                        height: size.height * 0.06,
+                        width: size.width * 0.8,
+                        child: TextButton(
+                            onPressed: () {},
+                            child:
+                                const Center(child: Text("Forgot Password ?"))),
                       ),
                     ),
-                  )
-                ],
+
+                    /*
+                    
+                    Widget that redirects to Sign Up Page
+          
+                    */
+
+                    Padding(
+                      padding: EdgeInsets.only(top: size.height * 0.01),
+                      child: SizedBox(
+                        height: size.height * 0.06,
+                        width: size.width * 0.8,
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text("Don't have an account?"),
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const SignUpPage()));
+                                },
+                                child: const Text("SignUp")),
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
@@ -158,8 +169,15 @@ class EmailWidget extends StatelessWidget {
                 errorBorder: OutlineInputBorder(
                     borderRadius:
                         BorderRadius.circular(inputFieldBorderRadius))),
+            validator: ((value) {
+              if (value!.isEmpty) {
+                return "email field cannot be empty";
+              } else {
+                return null;
+              }
+            }),
           ),
-        ),
+        )
       ],
     );
   }
@@ -195,25 +213,34 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                 child: TextFormField(
                   obscureText: !isShown,
                   decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.lock),
-                      hintStyle: const TextStyle(fontWeight: FontWeight.w700),
-                      hintText: "Your Password",
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius)),
-                      focusedErrorBorder: OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(width: 2, color: Colors.red),
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius)),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide:
-                              const BorderSide(width: 2, color: Colors.purple),
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius)),
-                      errorBorder: OutlineInputBorder(
-                          borderRadius:
-                              BorderRadius.circular(inputFieldBorderRadius))),
+                    prefixIcon: const Icon(Icons.lock),
+                    hintStyle: const TextStyle(fontWeight: FontWeight.w700),
+                    hintText: "Your Password",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius:
+                            BorderRadius.circular(inputFieldBorderRadius)),
+                    focusedErrorBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 2, color: Colors.red),
+                        borderRadius:
+                            BorderRadius.circular(inputFieldBorderRadius)),
+                    focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(width: 2, color: Colors.purple),
+                        borderRadius:
+                            BorderRadius.circular(inputFieldBorderRadius)),
+                    errorBorder: OutlineInputBorder(
+                      borderRadius:
+                          BorderRadius.circular(inputFieldBorderRadius),
+                    ),
+                  ),
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return "password can not be empty";
+                    } else {
+                      return null;
+                    }
+                  },
                 ),
               ),
               Positioned(
