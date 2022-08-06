@@ -39,6 +39,4 @@ def news():
     con.commit()
     con.close()
     return news
-
-if __name__ == "__main__":
-	print(news())		
+	
