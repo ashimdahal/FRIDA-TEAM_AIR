@@ -9,7 +9,12 @@ abstract class EmailState extends Equatable {
 
 class EmailInitial extends EmailState {}
 
-class EmailFieldValid extends EmailState {}
+class EmailFieldValid extends EmailState {
+  final String value;
+
+  const EmailFieldValid({required this.value});
+  String get email => value;
+}
 
 class EmailFieldInvalid extends EmailState {
   String get value => "Invalid Email";

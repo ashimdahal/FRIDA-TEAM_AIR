@@ -9,7 +9,7 @@ class PasswordCubit extends Cubit<PasswordState> {
     if (value.isEmpty) {
       emit(PasswordFieldInvalid());
     } else {
-      emit(PasswordFieldValid());
+      emit(PasswordFieldValid(value: value));
     }
   }
 }

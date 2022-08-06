@@ -9,7 +9,7 @@ class EmailCubit extends Cubit<EmailState> {
     if (value.isEmpty) {
       emit(EmailFieldInvalid());
     } else {
-      emit(EmailFieldValid());
+      emit(EmailFieldValid(value: value));
     }
   }
 }

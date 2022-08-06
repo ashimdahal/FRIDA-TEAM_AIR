@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:frontend_flutter/views/Alerts/Alerts_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../events/events_page.dart';
@@ -54,7 +55,14 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.only(right: size.width * 0.05),
               child: Stack(
                 children: [
-                  const Icon(Icons.notifications),
+                  InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>const  AlertsScreen()));
+                      },
+                      child: const Icon(Icons.notifications)),
                   Positioned(
                     right: 0,
                     child: Container(
@@ -292,7 +300,7 @@ Widget sideDrawer(context) {
                     color: Colors.white,
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(left: size.width*0.02),
+                    padding: EdgeInsets.only(left: size.width * 0.02),
                     child: Text(
                       "Demo User",
                       style: Theme.of(context).textTheme.headline5!.copyWith(
@@ -302,11 +310,14 @@ Widget sideDrawer(context) {
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(left: size.width*0.1),
-                child: Text("demo@gmail.com",
-                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-                  color: Colors.white
-                ),),
+                padding: EdgeInsets.only(left: size.width * 0.1),
+                child: Text(
+                  "demo@gmail.com",
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge!
+                      .copyWith(color: Colors.white),
+                ),
               )
             ],
           ),
