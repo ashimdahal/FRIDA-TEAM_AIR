@@ -15,7 +15,10 @@
 * [Contributors](#contributors)
 
 ## General info
-This is a one stop solution to all your climate action needs.
+Every year, heavy rainfall continues to affect most districts of Nepal, causing floods, triggering landslides, and leading to the increasing number of death of innocents and heavy damages. According to NDRR(Nepal Disaster Risk Reduction Portal), over 39 landslides and 16 floods were reported just in the first week of July 2021. According to the report, a total of 38 people died and 51 were injured within that time. More than 1250 people had been evacuated, 5100 displaced and a total of 790 houses were flooded.<br>
+This is only the statistic for a week, and when we go throughout the whole season, the damage can be huge. Therefore, with Frida, we believe that this problem can be tackled and the impact data can be reduced to half or less. Monsoon rainfall mostly has a localized impact. Search and rescue operations are always carried out on time but rescuing after a disaster may not be an appropriate solution. So, keeping machine learning and deep learning at the heart of our application, we have developed a system that can predict such disasters that may happen or have happened and may cause an impact on nearby locations such that people can be alert about the happenings and prevent themselves from a huge loss. Besides that, Frida also notifies the user about the events happening nearby, fundraiser activities, and a summary of the latest news related to the environment and climate actions.
+As the cherry on the top, Frida sends every user a personalized message every day regarding the weather around them.
+
 
 ## Scope
 
