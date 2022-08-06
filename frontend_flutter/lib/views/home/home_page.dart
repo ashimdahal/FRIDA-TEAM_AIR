@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,12 +10,32 @@ import 'components/personalized_component.dart';
 const imageName = "Assets/Images/backgroundImage.png";
 
 const lists = [
-  {"name": "Events", "iconData": Icons.event, "route": EventsScreen()},
-  {"name": "News", "iconData": Icons.newspaper, "route": NewsScreen()},
+  {
+    "name": "Events",
+    "iconData": Icons.event,
+    "route": EventsScreen(),
+    "colors": [
+      Color.fromARGB(255, 24, 40, 72),
+      Color.fromARGB(255, 75, 107, 183)
+    ]
+  },
+  {
+    "name": "News",
+    "iconData": Icons.newspaper,
+    "route": NewsScreen(),
+    "colors": [
+      Color.fromARGB(255, 75, 107, 183),
+      Color.fromARGB(255, 24, 40, 72)
+    ]
+  },
   {
     "name": "Funds",
     "iconData": Icons.attach_money_rounded,
-    "route": FundsScreen()
+    "route": FundsScreen(),
+    "colors": [
+      Color.fromARGB(255, 24, 40, 72),
+      Color.fromARGB(255, 75, 107, 183)
+    ]
   }
 ];
 
@@ -59,8 +80,7 @@ class HomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Container(
             width: size.width,
-            decoration:
-                const BoxDecoration(color: Color.fromARGB(255, 67, 108, 49)),
+            decoration: const BoxDecoration(color: Colors.white),
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
               child: Column(
@@ -82,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                             style: Theme.of(context)
                                 .textTheme
                                 .headline5!
-                                .copyWith(color: Colors.white),
+                                .copyWith(color: Colors.black),
                           ),
                           Text(
                             "DashBoard",
@@ -91,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                                 .headline4!
                                 .copyWith(
                                     fontWeight: FontWeight.w300,
-                                    color: Colors.white),
+                                    color: Colors.black),
                           )
                         ],
                       ),
@@ -102,10 +122,17 @@ class HomeScreen extends StatelessWidget {
                     padding: EdgeInsets.only(top: size.height * 0.04),
                     child: Container(
                       decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image: AssetImage(imageName), fit: BoxFit.fill),
-                          borderRadius: BorderRadius.circular(20.0),
-                          color: Colors.white),
+                        image: const DecorationImage(
+                            image: AssetImage(imageName), fit: BoxFit.fill),
+                        borderRadius: BorderRadius.circular(20.0),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color.fromARGB(57, 0, 0, 0),
+                            blurRadius: 5.0,
+                          ),
+                        ],
+                      ),
                       height: size.height * 0.3,
                       width: size.width * 0.9,
                       child: Column(
@@ -182,13 +209,15 @@ class HomeScreen extends StatelessWidget {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) =>
-                                              list["route"]));
+                                          builder: (context) => list["route"]));
                                 },
                                 child: Ink(
                                   height: size.height * 0.15,
                                   decoration: BoxDecoration(
-                                      color: Colors.white,
+                                      gradient: LinearGradient(colors: [
+                                        list["colors"][0],
+                                        list["colors"][1]
+                                      ]),
                                       borderRadius:
                                           BorderRadius.circular(12.0)),
                                   child: Row(
@@ -199,6 +228,7 @@ class HomeScreen extends StatelessWidget {
                                       Icon(
                                         list["iconData"],
                                         size: size.height * 0.05,
+                                        color: Colors.white,
                                       ),
                                       Padding(
                                         padding: EdgeInsets.only(
@@ -209,8 +239,7 @@ class HomeScreen extends StatelessWidget {
                                               .textTheme
                                               .headline5!
                                               .copyWith(
-                                                  color: const Color.fromARGB(
-                                                      255, 67, 108, 49),
+                                                  color: Colors.white,
                                                   fontWeight: FontWeight.bold),
                                         ),
                                       )
@@ -238,63 +267,82 @@ class HomeScreen extends StatelessWidget {
 Widget sideDrawer(context) {
   Size size = MediaQuery.of(context).size;
   return Drawer(
-    backgroundColor: const Color.fromARGB(255, 67, 108, 49),
+    backgroundColor: Colors.white,
     child: Column(
       children: [
         Container(
           height: size.height * 0.2,
           width: size.width,
-          decoration: const BoxDecoration(color: Colors.transparent),
-          child: Center(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.air,
-                  size: size.height * 0.04,
-                  color: Colors.white,
-                ),
-                Text(
-                  "Frida",
-                  style: Theme.of(context).textTheme.headline4!.copyWith(
-                      fontWeight: FontWeight.bold, color: Colors.white),
-                ),
-              ],
-            ),
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(colors: [
+            Color.fromARGB(255, 213, 51, 105),
+            Color.fromARGB(255, 255, 184, 140)
+          ])),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    CupertinoIcons.person_alt_circle,
+                    size: size.height * 0.06,
+                    color: Colors.white,
+                  ),
+                  Padding(
+                    padding:  EdgeInsets.only(left: size.width*0.02),
+                    child: Text(
+                      "Demo User",
+                      style: Theme.of(context).textTheme.headline5!.copyWith(
+                          fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: size.width*0.1),
+                child: Text("demo@gmail.com",
+                style: Theme.of(context).textTheme.bodyLarge!.copyWith(
+                  color: Colors.white
+                ),),
+              )
+            ],
           ),
         ),
-        drawerItem(size, context, Icons.home, "Home"),
-        drawerItem(size, context, Icons.newspaper, "News"),
-        drawerItem(size, context, Icons.event, "Events"),
-        drawerItem(size, context, Icons.attach_money_rounded, "Fundraise"),
-        drawerItem(size, context, Icons.flood, "Flood Near me"),
-        drawerItem(size, context, Icons.landslide, "Landslide Near me"),
+        drawerItem(const HomeScreen(), size, context, Icons.home, "Home"),
+        drawerItem(const NewsScreen(), size, context, Icons.newspaper, "News"),
+        drawerItem(const EventsScreen(), size, context, Icons.event, "Events"),
+        drawerItem(const FundsScreen(), size, context,
+            Icons.attach_money_rounded, "Fundraise"),
+        // drawerItem(size, context, Icons.flood, "Flood Near me"),
+        // drawerItem(size, context, Icons.landslide, "Landslide Near me"),
       ],
     ),
   );
 }
 
 Widget drawerItem(
-    Size size, BuildContext context, IconData iconData, String text) {
+    page, Size size, BuildContext context, IconData iconData, String text) {
   return Padding(
     padding: EdgeInsets.only(top: size.height * 0.03),
     child: InkWell(
       onTap: () {
-        // Navigator.pop(context);
-        // Navigator.push(
-        //     context, MaterialPageRoute(builder: ((context) => page)));
+        Navigator.pop(context);
+        Navigator.push(
+            context, MaterialPageRoute(builder: ((context) => page)));
       },
       child: ListTile(
         leading: Icon(
           iconData,
           size: size.height * 0.04,
-          color: Colors.white,
+          color: Colors.black,
         ),
         title: Text(
           text,
           style: Theme.of(context).textTheme.titleLarge!.copyWith(
-              color: Colors.white,
+              color: Colors.black,
               fontFamily: GoogleFonts.aBeeZee().fontFamily),
         ),
       ),

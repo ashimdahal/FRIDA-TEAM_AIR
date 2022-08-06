@@ -132,7 +132,7 @@ class _NewsScreenState extends State<NewsScreen> {
                                         },
                                         child: Ink(
                                           height: size.height * 0.04,
-                                          width: size.width*0.3,
+                                          width: size.width * 0.3,
                                           decoration: BoxDecoration(
                                               color: Colors.red,
                                               borderRadius:
