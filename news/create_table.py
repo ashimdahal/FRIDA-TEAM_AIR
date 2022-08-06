@@ -1,5 +1,4 @@
 import sqlite3
-import nepali_news,nepali_news_2
 
 def getnews():
 
