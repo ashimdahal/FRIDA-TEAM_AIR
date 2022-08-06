@@ -129,7 +129,6 @@ Following are the features of Frida
 </p>
     
     
-                                                                                                                       h  
                                                                                                             
                                                                                                             
                                                                                                                             
