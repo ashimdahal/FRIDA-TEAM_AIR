@@ -9,11 +9,8 @@ abstract class EmailState extends Equatable {
 
 class EmailInitial extends EmailState {}
 
-class EmailFieldValid extends EmailState{}
+class EmailFieldValid extends EmailState {}
 
-class EmailFieldInvalid extends EmailState{
-     String get value => "Invalid Email";
+class EmailFieldInvalid extends EmailState {
+  String get value => "Invalid Email";
 }
-
-
-

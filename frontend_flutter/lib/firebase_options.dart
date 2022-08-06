@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '320772079693',
     projectId: 'team-air-165ff',
     storageBucket: 'team-air-165ff.appspot.com',
-    iosClientId: '320772079693-tj0tkl0f65oefbccaemlcaok7au94cgn.apps.googleusercontent.com',
+    iosClientId:
+        '320772079693-tj0tkl0f65oefbccaemlcaok7au94cgn.apps.googleusercontent.com',
     iosBundleId: 'com.example.frontendFlutter',
   );
 }
