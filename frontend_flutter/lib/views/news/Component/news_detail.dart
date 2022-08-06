@@ -28,12 +28,15 @@ class NewsDetail extends StatelessWidget {
                   BoxShadow(color: Color.fromARGB(59, 0, 0, 0), blurRadius: 5.0)
                 ]),
             child: Padding(
-              padding:  EdgeInsets.symmetric(vertical: size.height*0.03,horizontal: size.width*0.05),
-              child: Text(news.description,
-              style: Theme.of(context).textTheme.headline6!.copyWith(
-                color: Colors.black,
-                fontWeight: FontWeight.w500
-              ),),
+              padding: EdgeInsets.symmetric(
+                  vertical: size.height * 0.03, horizontal: size.width * 0.05),
+              child: Text(
+                news.description,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6!
+                    .copyWith(color: Colors.black, fontWeight: FontWeight.w500),
+              ),
             ),
           ),
         ),
