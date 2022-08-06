@@ -1,6 +1,6 @@
 
 # Frida
-> A one-stop solution to all your climate action needs which do predict landslides, and flood events, and provides news summary, fundraising, and upcoming events alerts on climate change.
+> A one-stop solution to all your climate action needs which predicts landslides, and flood events, and provides news summary, fundraising, and upcoming events alerts on climate change.
 
 <p align="center">
     <img src="/images/Frida_Cover.png")
