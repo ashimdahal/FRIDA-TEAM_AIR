@@ -109,20 +109,20 @@ Following are the features of Frida
 <a href="https://github.com/prabeshPP" target="_blank" rel="noreferrer">
     <img src="images/Prabesh%20Bista.png" width="161" height="185"/>
 </a>
+<span>
 <a href="https://github.com/Anuj-Khadka" target="_blank" rel="noreferrer" >
     <img src="/images/Anuj Khadka.png" width="161" height="185"/>
 </a>
 <a href="https://github.com/kbshal" target="_blank" rel="noreferrer">
     <img src="/images/Bishal%20Kharal.png" width="161" height="185"/>
-</a>
+</a>                                                                  
 <a href="https://github.com/dev-hari" target="_blank" rel="noreferrer">
     <img src="images/Hari%20Paudyal.png" width="161" height="185"/>
-</a>
-    
+</a>  
     
 </div>                                                                                                                         
 
-                                                                                                                          
+---
                                                                                                                           
 ## Special Thanks to Organizers:
 <p align="left">
