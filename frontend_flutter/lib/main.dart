@@ -7,7 +7,6 @@ import 'package:frontend_flutter/viewmodel/field/email/cubit/email_cubit.dart';
 import 'package:frontend_flutter/viewmodel/field/password/cubit/password_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:frontend_flutter/views/auth/login_page.dart';
-import 'package:frontend_flutter/views/home/home_page.dart';
 import 'firebase_options.dart';
 
 void main() async {

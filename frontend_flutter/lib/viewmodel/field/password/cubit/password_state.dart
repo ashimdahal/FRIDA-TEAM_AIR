@@ -15,6 +15,8 @@ class PasswordFieldValid extends PasswordState {
   const PasswordFieldValid({required this.value});
 
   String get password => value;
+  @override
+  List<Object> get props => [value];
 }
 
 class PasswordFieldInvalid extends PasswordState {
