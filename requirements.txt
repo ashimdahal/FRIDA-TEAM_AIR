@@ -6,3 +6,6 @@ requests_html
 html5lib
 -f https://download.pytorch.org/whl/cpu
 torch==1.12.1
+fastapi
+pydantic
+
