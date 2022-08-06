@@ -12,5 +12,4 @@ class EmailCubit extends Cubit<EmailState> {
       emit(EmailFieldValid());
     }
   }
-
 }
