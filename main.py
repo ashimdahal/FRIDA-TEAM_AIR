@@ -4,8 +4,8 @@ from fastapi.responses import PlainTextResponse
 from fundraiser.gofund import funds
 from news.create_table import getnews
 from flood_detection.flooddetection import flood_info
-from landslides.predict import get_weather
-import torch
+from landslides.create_table import getlandslides
+# import torch
 from landslides.predict import LogisticRegression
 from pathlib import Path
 
@@ -33,14 +33,6 @@ async def getevents():
 
 
 @app.get('/landslides')
-async def landslides(city:str):
-    key = open('landslides/key.txt','r').read()
-    url = f"http://api.openweathermap.org/data/2.5/weather?appid={key}"+f"&q=bhaktapur&unit=metrics"
-    model = LogisticRegression()
-    model.load_state_dict(torch.load(Path(__file__).resolve().parent /'landslides/model.pt',map_location=torch.device('cpu')))
-    inp = torch.tensor(get_weather(key,url,city)).unsqueeze(0)
-    get_weather(key,url,city)
-    inp = torch.tensor(get_weather(key,url,city)).unsqueeze(0)
-    value=model(inp).item()
-    message={f"landslide_probability in bhaktapur ":value}
-    return message
+async def landslides():
+    news=getlandslides()
+    return news
