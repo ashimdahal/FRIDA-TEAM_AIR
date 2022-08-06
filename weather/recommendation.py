@@ -33,7 +33,7 @@ weather_dict = RangeDict(
         # message for clouds
         range(801,805):'Today, you\'ll be covered with love, care and clouds; no signs of rain though in the forcast but would be a good idea to grab an umbrella.',
 
-        '800':'Clear weather today.',
+        '800':'Today the weather is as clear as your heart and soul; wishing you a great day ahead.',
 
         # not relavent for nepal I guess.
         '701'	:'Mist',	
