@@ -116,6 +116,22 @@ Following are the features of Frida
         <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white" />
     </a>
 </p>
+                                                                                                             
+
+## Repo Details
+ <p align="left">
+    <img src="https://img.shields.io/github/contributors/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
+    <img src="https://img.shields.io/github/last-commit/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
+    <img src="https://img.shields.io/github/forks/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
+    <img src="https://img.shields.io/github/issues-pr-closed/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
+    <img src="https://img.shields.io/github/commit-activity/w/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
+</p>
+    
+    
+                                                                                                                       h  
+                                                                                                            
+                                                                                                            
                                                                                                                             
     
     
