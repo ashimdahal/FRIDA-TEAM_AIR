@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:frontend_flutter/utils/theme.dart';
-import 'package:frontend_flutter/viewmodel/field/cubit/field_cubit.dart';
+import 'package:frontend_flutter/viewmodel/field/email/cubit/email_cubit.dart';
+import 'package:frontend_flutter/viewmodel/field/password/cubit/password_cubit.dart';
 import 'package:frontend_flutter/views/auth/login_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -22,11 +23,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MultiBlocProvider(providers: [
-        BlocProvider<FieldCubit>(
+        BlocProvider<EmailCubit>(
           create: (BuildContext context) {
-            return FieldCubit();
+            return EmailCubit();
           },
-        )
+        ),
+        BlocProvider<PasswordCubit>(create: (BuildContext context) {
+          return PasswordCubit();
+        })
       ], child: const LoginPage()),
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(),

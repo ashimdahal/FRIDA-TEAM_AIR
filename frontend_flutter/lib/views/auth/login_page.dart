@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:frontend_flutter/viewmodel/field/cubit/field_cubit.dart';
+import 'package:frontend_flutter/viewmodel/field/email/cubit/email_cubit.dart';
+import 'package:frontend_flutter/viewmodel/field/password/cubit/password_cubit.dart';
 import 'package:frontend_flutter/views/auth/signup_page.dart';
 
 const inputFieldBorderRadius = 6.0;
@@ -146,7 +147,7 @@ class EmailWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return BlocBuilder<FieldCubit, FieldState>(
+    return BlocBuilder<EmailCubit, EmailState>(
       builder: (context, state) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -162,7 +163,7 @@ class EmailWidget extends StatelessWidget {
               child: TextFormField(
                 textInputAction: TextInputAction.next,
                 onChanged: (value) {
-                  context.read<FieldCubit>().onEmailChange(value);
+                  context.read<EmailCubit>().onEmailChange(value);
                 },
                 decoration: InputDecoration(
                     errorText:
@@ -207,7 +208,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return BlocBuilder<FieldCubit, FieldState>(
+    return BlocBuilder<PasswordCubit, PasswordState>(
       builder: (context, state) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,7 +251,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                       ),
                       onChanged: (value) {
                         return context
-                            .read<FieldCubit>()
+                            .read<PasswordCubit>()
                             .onPasswordChange(value);
                       },
                     ),
