@@ -183,7 +183,7 @@ class HomeScreen extends StatelessWidget {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              EventsScreen()));
+                                              list["route"]));
                                 },
                                 child: Ink(
                                   height: size.height * 0.15,
