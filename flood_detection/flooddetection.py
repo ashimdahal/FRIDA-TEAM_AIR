@@ -4,6 +4,7 @@ import asyncio
 import datetime
 import json
 import requests
+from datetime import timedelta
 
 flood_places={
     "Chamelia at Karkale Gaun":21571,
@@ -30,14 +31,15 @@ flood_places={
     "Kali Gandaki at Kalipul Beni":20005
 }
 
-
 _base_url="https://hydrology.gov.np/gss/api/observation?series_id={}&date_from={}&date_to={}"
-async def flood_info():
+def flood_info():
     final_output={}
     for _river_loc in flood_places:
         counter,water_level,res=0,0,None
-        url=_base_url.format(_river_loc,str(datetime.date.today()),str(datetime.date.today()))
+        url=_base_url.format(_river_loc,str((datetime.datetime.now() - timedelta(days=1)).date()),str(datetime.date.today()))
+        print(url)
         res=requests.get(url)
+        print(res.text)
         res=json.loads(res.text)
         for event in res['data']:
             water_level+=int(event['value'])
@@ -46,11 +48,9 @@ async def flood_info():
             final_output[_river_loc]={"water level":water_level,"message":"Stay alert high chance of flood"}
         if water_level<5:
             final_output[_river_loc]={"water level":water_level,"message":"Water level is nominal"}
-
-    return final_output
+    #print(final_output)
+    #return final_output
         
 
 
-
-
-
+flood_info()
