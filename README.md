@@ -24,6 +24,9 @@ This is only the statistics for a week, and when we go throughout the whole mons
 ## Scope
 
 ## Technologies
+With the implementation of principles of machine learning and deep learning, to predict the landslides and floods nearby, and statistical analysis of weather-map data, Frida is an application fully powered by Firebase at the backend, presented in dart flutter and served in “.apk” format. Though the code and structuring in the backend may look complex, the app is designed such that users won’t have trouble accessing the features. UI is as simple and intuitive as possible.<br><br>
+
+   
 <p align="left">
     <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
         <img src="https://img.shields.io/badge/pytorch-EE4C2C?style=for-the-badge&logo=PyTorch&logoColor=white" />
@@ -40,40 +43,46 @@ This is only the statistics for a week, and when we go throughout the whole mons
             src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="dart" />
     </a>                                                                                                        
     <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+        <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas"/>
     </a>
     <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
-    </a>                                                                                                 
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"  alt="figma"/>
+    </a>    
+    <a href="https://fastapi.tiangolo.com/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/Fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=white"  alt="fastapi"/>
+    </a>
+    <a href="https://www.uvicorn.org/" target="_blank" rel="noreferrer">
+        <img src="https://img.shields.io/badge/uvicorn-499848?style=for-the-badge&logo=uvicorn&logoColor=white"  alt="uvicorn"/>
+    </a>
     <a href="https://www.nltk.org//" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/nltk-595F69?style=for-the-badge&logo=nltk&logoColor=white" />
+        <img src="https://img.shields.io/badge/nltk-595F69?style=for-the-badge&logo=nltk&logoColor=white"  alt="nltk"/>
     </a>
     <a href="https://newspaper.readthedocs.io/en/latest//" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/newspaper3k-4473C5?style=for-the-badge&logo=newspaper3kpython&logoColor=white" />
+        <img src="https://img.shields.io/badge/newspaper3k-4473C5?style=for-the-badge&logo=newspaper3kpython&logoColor=white"  alt="newspaper3k"/>
     </a>
     <a href="https://numpy.org/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+        <img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white"  alt="numpy"/>
     </a>
     <a href="https://matplotlib.org/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/matplotlib-EE4C2C?style=for-the-badge&logo=matPlotLib&logoColor=white" />
+        <img src="https://img.shields.io/badge/matplotlib-EE4C2C?style=for-the-badge&logo=matPlotLib&logoColor=white"  alt="matplotlib"/>
     </a>
     <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc//" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/beautiful%20soup-3D3D3D?style=for-the-badge&logo=beautifulSoup4&logoColor=white" />
+        <img src="https://img.shields.io/badge/beautiful%20soup-3D3D3D?style=for-the-badge&logo=beautifulSoup4&logoColor=white"  alt="bs4"/>
     </a>
     <a href="https://www.sqlite.org/index.html" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/sqlite3-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
+        <img src="https://img.shields.io/badge/sqlite3-003B57?style=for-the-badge&logo=sqlite&logoColor=white"  alt="sqlite3"/>
     </a>
     <a href="https://scrapy.org/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/scrapy-5FA839?style=for-the-badge&logo=scrapy&logoColor=white" />
+        <img src="https://img.shields.io/badge/scrapy-5FA839?style=for-the-badge&logo=scrapy&logoColor=white"  alt="scrapy"/>
     </a>
     <a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" />
+        <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white"  alt="firebase"/>
     </a>
     <a href="https://openweathermap.org/api" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/openweathermap-003B57?style=for-the-badge&logo=openweathermap&logoColor=white" />
+        <img src="https://img.shields.io/badge/openweathermap-003B57?style=for-the-badge&logo=openweathermap&logoColor=white"  alt="open weather app"/>
     </a>                                                                                                                  
     <a href="https://colab.research.google.com/" target="_blank" rel="noreferrer">
-        <img src="https://img.shields.io/badge/google%20colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white" />
+        <img src="https://img.shields.io/badge/google%20colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white"  alt="google colab"/>
     </a>
 </p>
 
@@ -151,7 +160,7 @@ Following are the features of Frida
     <img src="https://img.shields.io/github/forks/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
     <img src="https://img.shields.io/github/issues-pr-closed/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
-    <img src="https://img.shields.io/github/commit-activity/w/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />
+    <img src="https://img.shields.io/github/commit-activity/w/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest?style=for-the-badge" />                                                                                                               
 </p>
     
     
