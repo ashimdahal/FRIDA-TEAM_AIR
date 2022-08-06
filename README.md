@@ -10,7 +10,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Glimpse](#glimpse)
-* [Get Started](#get-started)
+* [How to Run](#how-to-run)
 * [Why Name Frida?](#why-name-frida)
 * [Features](#features)
 * [Contributors](#contributors)
