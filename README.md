@@ -85,6 +85,18 @@ With the implementation of principles of machine learning and deep learning, to 
 
                                                                                                                                               
 ## Glimpse
+<p align="left">
+    <img src="/images/screenshot/glimpse 1.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
+    <img src="/images/screenshot/glimpse 2.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
+    <img src="/images/screenshot/glimpse 3.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
+    <img src="/images/screenshot/glimpse 4.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
+    <img src="/images/screenshot/glimpse 5.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
+    <img src="/images/screenshot/glimpse 6.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
+    <img src="/images/screenshot/glimpse 7.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp; 
+    
+</p>
+### Note: We Couldn't build as big app as we wanted due to limited space on free servers. Also, we were unable to deploy landslides detection model on app because  pytorch required 700 MB space which was not available to us. Still the model, its data generation and data analysics can be viewed on the jupyter notebook on the [landslide](/landslides) repo. time constraint was also a factor to built a dataset from ground up and train excellent model in it
+
 
                                                                                                                                               
 ## How to Run
