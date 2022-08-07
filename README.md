@@ -113,6 +113,10 @@ Also, you can download Frida in your own mobilephone and experience it through [
 Or scan in your phone through the QR Code to get the download link: 
                                                                                          
 <img src="/images/QR_Code_Frida.png"  alt="qr code" width="150" height="150"/>&nbsp;&nbsp;
+
+Note:Use demo account for Login
+email:demo@gmail.com
+password:demodemo
                                                                                                                                               
 ## Why Name Frida?
 Frida is a 13 years Golden Labrador Retriever rescue dog in the Mexican Navy who spent her life helping rescue survivors worldwide in the wake of natural disasters. Frida has helped save the lives of many people during massive natural disasters, like the 2010 Haiti earthquake, and the 2012 Guatemala landslides. The pup became a household name in the aftermath of a deadly earthquake in Mexico in 2017 when was credited for finding over a dozen people alive over her storied career. <br><br>
