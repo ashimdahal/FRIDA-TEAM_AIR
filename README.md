@@ -90,10 +90,8 @@ With the implementation of principles of machine learning and deep learning, to 
     <img src="/images/screenshot/glimpse 2.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
     <img src="/images/screenshot/glimpse 3.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
     <img src="/images/screenshot/glimpse 4.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
-    <img src="/images/screenshot/glimpse 5.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
     <img src="/images/screenshot/glimpse 6.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp;
     <img src="/images/screenshot/glimpse 7.jpg"  alt="screeshot" width="216" height="420"/>&nbsp;&nbsp; 
-    
 </p>
                                                                                          
 ###  Note: We Couldn't build as big app as we wanted due to limited space on free servers. Also, we were unable to deploy landslides detection model on app because  pytorch required 700 MB space which was not available to us. Still the model, its data generation and data analysics can be viewed on the jupyter notebook on the [landslides](https://github.com/ashimdahal/FRIDA-TEAM_AIR-KU-hackfest/tree/main/landslides) repo. time constraint was also a factor to built a dataset from ground up and train excellent model in it
@@ -111,6 +109,10 @@ You have to take a key to run through the application, signup to [OpenWeatherApp
 To edit source code, go to the locations listed in [Git Ignore](/.gitignore) and add the key that was made earlier.
                                                                                          
 Also, you can download Frida in your own mobilephone and experience it through [Frida.apk](https://drive.google.com/file/d/1jvmtl-UM-sZxE1ai2cvoKpvDaPz95ki-/view?usp=sharing)
+                                                                                         
+Or scan in your phone through the QR Code to get the download link: 
+                                                                                         
+<img src="/images/QR_Code_Frida.png"  alt="qr code" width="150" height="150"/>&nbsp;&nbsp;
                                                                                                                                               
 ## Why Name Frida?
 Frida is a 13 years Golden Labrador Retriever rescue dog in the Mexican Navy who spent her life helping rescue survivors worldwide in the wake of natural disasters. Frida has helped save the lives of many people during massive natural disasters, like the 2010 Haiti earthquake, and the 2012 Guatemala landslides. The pup became a household name in the aftermath of a deadly earthquake in Mexico in 2017 when was credited for finding over a dozen people alive over her storied career. <br><br>
@@ -144,7 +146,7 @@ Following are the features of Frida
 <a href="https://github.com/dev-hari" target="_blank" rel="noreferrer">
     <img src="images/Hari%20Paudyal.png" width="161" height="185"/>
 </a>  
-    
+<br>From Left: Ashim Dahal | Prabesh Bista | Anuj Khadka | Bishal Kharal | Hari Paudyal  
 </div>                                                                                                                         
 
                                                                  
