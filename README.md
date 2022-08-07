@@ -110,7 +110,7 @@ To edit source code, go to the locations listed in [Git Ignore](/.gitignore) and
                                                                                          
 Also, you can download Frida in your own mobilephone and experience it through [Frida.apk](https://drive.google.com/file/d/1jvmtl-UM-sZxE1ai2cvoKpvDaPz95ki-/view?usp=sharing)
                                                                                          
-Or scan in your phone through the QR Code: 
+Or scan in your phone through the QR Code to get the download link: 
                                                                                          
 <img src="/images/QR_Code_Frida.png"  alt="qr code" width="150" height="150"/>&nbsp;&nbsp;
                                                                                                                                               
